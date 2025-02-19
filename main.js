@@ -10,10 +10,10 @@ console.log(passangerName);
 
 // - 
 let passNameEl = document.getElementById('name')
-let discountEl = document.getElementById('name')
-let chariotEl = document.getElementById('name')
-let codeEl = document.getElementById('name')
-let priceEl = document.getElementById('name')
+let discountEl = document.getElementById('discount')
+let chariotEl = document.getElementById('chariot-number')
+let codeEl = document.getElementById('code')
+let priceEl = document.getElementById('price')
 
 
  formEl.addEventListener('submit', function(e){
@@ -24,12 +24,15 @@ let priceEl = document.getElementById('name')
     let discount20 = standardPrice * 0.20;
     let discount40 = standardPrice * 0.40;
 
+    
+
     passNameEl.innerHTML = passangerName.value;
 
     if (inputAgeEl.value < 18){
          standardPrice -= standardPrice * discount20; 
          textEl.innerText  = `Il costo del tuo biglietto è € ${discount20.toFixed(2)} - hai diritto ad un 20% di sconto` ;
-         console.log(textEl);
+         discountEl.innerHTML = '20% di sconto'
+         priceEl.innerHTML = `€ ${discount20.toFixed(2)}`
          
         } 
     else if (inputAgeEl.value > 65) {
