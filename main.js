@@ -8,20 +8,20 @@ console.log(textEl);
 
 console.log(inputAgeEl);
 
- const standardPrice = inputKmEl * 0.21;
- const discount20 = standardPrice * 0.20;
- const discount40 = standardPrice * 0.40;
 
  btnEl.addEventListener('submit', function(e){
     console.log(btnEl);
     
+    const standardPrice = inputKmEl * 0.21;
+    const discount20 = standardPrice * 0.20;
+    const discount40 = standardPrice * 0.40;
     e.preventDefault();
 
-    if (inputAgeEl < 18){
+    if (inputAgeEl.value < 18){
          standardPrice -= standardPrice * discount20; 
          textEl.innerText  = `Il costo del tuo biglietto è € ${discount20.toFixed(2)} - hai diritto ad un 20% di sconto` ;
         } 
-    else if (inputAgeEl > 65) {
+    else if (inputAgeEl.value > 65) {
                standardPrice -= standardPrice * discount40; 
          textEl.innerText  = `Il costo del tuo biglietto è € ${discount40.toFixed(2)} - hai diritto ad un 40% di sconto` ;
             
