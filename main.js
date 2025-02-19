@@ -1,3 +1,5 @@
+// - Form inputs 
+
 const formEl = document.querySelector('form')
 const inputKmEl = document.querySelector('.input-km')
 const inputAgeEl = document.querySelector('.input-age')
@@ -6,8 +8,12 @@ const textEl = document.querySelector('p')
 const passangerName = document.querySelector('.input-name');
 console.log(passangerName);
 
+// - 
 let passNameEl = document.getElementById('name')
-console.log(passNameEl);
+let discountEl = document.getElementById('name')
+let chariotEl = document.getElementById('name')
+let codeEl = document.getElementById('name')
+let priceEl = document.getElementById('name')
 
 
  formEl.addEventListener('submit', function(e){
