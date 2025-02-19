@@ -1,12 +1,13 @@
 const formEl = document.querySelector('form')
 const inputKmEl = document.querySelector('.input-km')
-console.log(inputKmEl);
 const inputAgeEl = document.querySelector('.input-age')
 const btnEl = document.querySelector('button')
 const textEl = document.querySelector('p')
-console.log(textEl);
+const passangerName = document.querySelector('.input-name');
+console.log(passangerName);
 
-console.log(inputAgeEl);
+let passNameEl = document.getElementById('name')
+console.log(passNameEl);
 
 
  formEl.addEventListener('submit', function(e){
@@ -16,6 +17,8 @@ console.log(inputAgeEl);
     let standardPrice = inputKmEl.value * 0.21;
     let discount20 = standardPrice * 0.20;
     let discount40 = standardPrice * 0.40;
+
+    passNameEl.innerHTML = passangerName.value;
 
     if (inputAgeEl.value < 18){
          standardPrice -= standardPrice * discount20; 
