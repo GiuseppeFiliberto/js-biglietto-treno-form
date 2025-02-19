@@ -4,6 +4,14 @@
     margin: 0;
 }
 
+.bg-page{
+    background-color: #0A014F;
+}
+
+.bg-cont{
+    background-color: #CD9FCC;
+}
+
 .top-part{
     gap: 1rem;
 }
