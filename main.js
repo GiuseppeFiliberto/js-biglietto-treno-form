@@ -11,6 +11,7 @@ console.log(passangerName);
 // - 
 let passNameEl = document.getElementById('name')
 let discountEl = document.getElementById('discount')
+let chariotEl = document.getElementById('chariot-number');
 let codeEl = document.getElementById('code')
 let priceEl = document.getElementById('price')
 
@@ -23,9 +24,10 @@ let priceEl = document.getElementById('price')
     let discount20 = standardPrice * 0.20;
     let discount40 = standardPrice * 0.40;
 
-    let chariotEl = document.getElementById('chariot-number');
 
     chariotEl.innerHTML = Math.floor(Math.random() * 10);
+    codeEl.innerHTML = Math.floor(Math.random() * 5000);
+
 
     passNameEl.innerHTML = passangerName.value;
 
