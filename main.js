@@ -4,6 +4,8 @@ console.log(inputKmEl);
 const inputAgeEl = document.querySelector('.input-age')
 const btnEl = document.querySelector('button')
 const textEl = document.querySelector('p')
+console.log(textEl);
+
 console.log(inputAgeEl);
 
  const standardPrice = inputKmEl * 0.21;
@@ -11,6 +13,9 @@ console.log(inputAgeEl);
  const discount40 = standardPrice * 0.40;
 
  btnEl.addEventListener('submit', function(e){
+    console.log(btnEl);
+    
+    e.preventDefault();
 
     if (inputAgeEl < 18){
          standardPrice -= standardPrice * discount20; 
@@ -24,6 +29,8 @@ console.log(inputAgeEl);
         else {
            textEl.innerText =  `Il costo del tuo biglietto è € ${standardPrice.toFixed(2)}`
         }
+
+
 })
 
 
