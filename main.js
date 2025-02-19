@@ -2,13 +2,12 @@
 
 const formEl = document.querySelector('form')
 const inputKmEl = document.querySelector('.input-km')
-const inputAgeEl = document.querySelector('.input-age')
+const inputAgeEl = document.getElementById('input-age')
+const inputAge = document.querySelector('.input-age')
 const btnEl = document.querySelector('button')
-const textEl = document.querySelector('p')
 const passangerName = document.querySelector('.input-name');
-console.log(passangerName);
 
-// - 
+
 let passNameEl = document.getElementById('name')
 let discountEl = document.getElementById('discount')
 let chariotEl = document.getElementById('chariot-number');
@@ -31,20 +30,22 @@ let priceEl = document.getElementById('price')
 
     passNameEl.innerHTML = passangerName.value;
 
-    if (inputAgeEl.value < 18){
+         if (inputAgeEl.value < 18){
          standardPrice -= standardPrice * discount20; 
-         textEl.innerText  = `Il costo del tuo biglietto è € ${discount20.toFixed(2)} - hai diritto ad un 20% di sconto` ;
+        //  textEl.innerText  = `Il costo del tuo biglietto è € ${discount20.toFixed(2)} - hai diritto ad un 20% di sconto` ;
          discountEl.innerHTML = '20% di sconto'
          priceEl.innerHTML = `€ ${discount20.toFixed(2)}`
          
         } 
-    else if (inputAgeEl.value > 65) {
-               standardPrice -= standardPrice * discount40; 
-         textEl.innerText  = `Il costo del tuo biglietto è € ${discount40.toFixed(2)} - hai diritto ad un 40% di sconto` ;
-            
+         else if (inputAgeEl.value > 65) {
+                 standardPrice -= standardPrice * discount40; 
+                 discountEl.innerHTML = '40% di sconto'
+                 priceEl.innerHTML = `€ ${discount20.toFixed(2)}`
             } 
         else {
-           textEl.innerText =  `Il costo del tuo biglietto è € ${standardPrice.toFixed(2)}`
+        //    textEl.innerText =  `Il costo del tuo biglietto è € ${standardPrice.toFixed(2)}`
+            discountEl.innerHTML = 'Tariffa Standard'
+            priceEl.innerHTML = `€ ${discount20.toFixed(2)}`
         }
 
 
