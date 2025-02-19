@@ -1,4 +1,4 @@
-
+const formEl = document.querySelector('form')
 const inputKmEl = document.querySelector('.input-km')
 console.log(inputKmEl);
 const inputAgeEl = document.querySelector('.input-age')
@@ -9,17 +9,19 @@ console.log(textEl);
 console.log(inputAgeEl);
 
 
- btnEl.addEventListener('submit', function(e){
+ formEl.addEventListener('submit', function(e){
     console.log(btnEl);
-    
-    const standardPrice = inputKmEl * 0.21;
-    const discount20 = standardPrice * 0.20;
-    const discount40 = standardPrice * 0.40;
     e.preventDefault();
+    
+    let standardPrice = inputKmEl.value * 0.21;
+    let discount20 = standardPrice * 0.20;
+    let discount40 = standardPrice * 0.40;
 
     if (inputAgeEl.value < 18){
          standardPrice -= standardPrice * discount20; 
          textEl.innerText  = `Il costo del tuo biglietto è € ${discount20.toFixed(2)} - hai diritto ad un 20% di sconto` ;
+         console.log(textEl);
+         
         } 
     else if (inputAgeEl.value > 65) {
                standardPrice -= standardPrice * discount40; 
