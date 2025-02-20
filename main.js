@@ -6,6 +6,7 @@ const inputAgeEl = document.getElementById('input-age')
 const inputAge = document.querySelector('.input-age')
 const btnEl = document.querySelector('button')
 const passangerName = document.querySelector('.input-name');
+const ticket = document.getElementById('ticket-section')
 
 
 let passNameEl = document.getElementById('name')
@@ -48,7 +49,7 @@ let priceEl = document.getElementById('price')
             priceEl.innerHTML = `€ ${discount20.toFixed(2)}`
         }
 
-
+        ticket.classList.toggle('d-none')
 })
 
 
