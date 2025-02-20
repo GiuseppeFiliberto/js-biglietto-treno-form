@@ -9,13 +9,16 @@
 </head>
 <body class="bg-page">
 
-   
-   
+
+   <div class="container bg-form rounded-5 p-3">
+
     <form action="">
 
-        <div class="container p-3 bg-cont my-5 rounded-5">
-            <div class="row py-3">
-               
+        <div class="container p-3 ">
+                <h1 class="text-center text-white p-3">Boolitalia</h1>
+
+                <div class="row py-3 rounded-5 bg-cont">
+                
                
                 <div class="col-4">
                     <div class="mb-3 text-center">
@@ -51,29 +54,54 @@
                     <button type="submit" class="btn btn-primary">Calcola</button>
                     <button type="reset" class="btn btn-primary">Annulla</button>
                   </div>
-            
-                </form>
                 
-            </div>
+            
         </div>  
           
         
-  <div class="container pt-5">
+        <div class="container pt-5">
 
-    <h1 class="text-center text-white">Il tuo biglietto</h1>
+            <h1 class="text-center text-white mb-5">Il tuo biglietto</h1>
 
-    <div class="row p-4 bg-cont rounded-5">
+            <div class="row p-4 bg-cont rounded-5">
 
-      <div class="col-4">
-        <h3 class="text-center">Passeggero</h3>
-        <div class="bg-name p-3 rounded-5">
-          <h4>Nome e Cognome</h4>
-          <div class="input-name">Nome Passeggero</div>
-        </div>
-      </div>
+            <div class="col-4">
+                <h3 class="text-center">Passeggero</h3>
+                <div class="bg-ticket p-3 rounded-5">
+                <h4>Nome e Cognome</h4>
+                <div id="name">Nome Passeggero</div>
+                </div>
+            </div>
 
-    </div>
+            <div class="col-8">
+                <h3 class="text-center">Dettagli viaggio</h3>
+
+                <div class="row py-3 bg-ticket rounded-5">
+                <div class="col-3 d-flex flex-column justify-content-center gap-1">
+                    <h5>Tariffa</h5>
+                    <span id="discount">-</span>
+                </div>
+                <div class="col-3 d-flex flex-column justify-content-center gap-1">
+                    <h5>Carrozza</h5>
+                    <span id="chariot-number">-</span>
+                </div>
+                <div class="col-3 d-flex flex-column justify-content-center gap-1">
+                    <h5>CP Code</h5>
+                    <span id="code">-</span>
+                </div>
+                <div class="col-3 d-flex flex-column justify-content-center gap-1">
+                    <h5>Prezzo</h5>
+                    <span id="price">&euro;</span>
+                </div>
+                </div>
+            </div>
+
+            </div>
     </form>
+
+   </div>
+   
+    
 
     <script src="./main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

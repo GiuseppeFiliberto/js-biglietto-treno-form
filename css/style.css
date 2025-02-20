@@ -15,6 +15,13 @@
 .bg-name{
     background-color: #E4C2C6;
 }
+
+.bg-ticket{
+    background-color: #FAE8EB;
+}
+.bg-form{
+    background-color: #F6CACA;
+}
 .top-part{
     gap: 1rem;
 }
